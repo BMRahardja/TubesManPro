@@ -1,0 +1,110 @@
+/* profileFromViewer_styles.css
+   Consolidated styles for profileFromViewer.php */
+
+/* Layout container override (if needed) */
+.right_side {
+  display: block;
+  align-items: normal;
+}
+
+/* Video grid styling */
+.video_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Video card styling */
+.video_card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.video_card:hover {
+  transform: scale(1.03);
+}
+
+/* Thumbnail container and image */
+.thumbnail_container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.thumbnail_img {
+  width: 100%;
+  display: block;
+}
+
+/* Video information block */
+.video_info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.video_title {
+  font-size: 16px;
+  margin: 0 0 6px;
+  color: #333;
+  line-height: 1.2;
+}
+.channel_name {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.channel_name a {
+  color: #555;
+  text-decoration: none;
+}
+.channel_name a:hover {
+  text-decoration: underline;
+}
+
+/* Meta row (views and date) */
+.video_meta {
+  font-size: 14px;
+  color: #666;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video_views, .upload_date {
+  white-space: nowrap;
+}
+
+/* Empty state styling */
+.empty_state {
+  text-align: center;
+  padding: 40px 20px;
+}
+.empty_icon {
+  font-size: 48px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+.empty_text {
+  font-size: 20px;
+  color: #777;
+  margin-bottom: 12px;
+}
+.upload_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #cc0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.upload_btn:hover {
+  background-color: #b30000;
+}
