@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../Styles/profile_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <!-- Banner -->
+        <div class="profile_banner">
+          <img src="path/to/banner.jpg" alt="Banner Channel" />
+        </div>
+
+        <!-- Info Profil -->
+        <div class="profile_info">
+          <div class="profile_image">
+            <img src="path/to/profile.jpg" alt="Foto Profil" />
+          </div>
+          <div class="profile_details">
+            <h2>Nama Channel</h2>
+            <p class="username">@username</p>
+            <p>123K Subscribers • 56 Videos</p>
+          </div>
+        </div>
+
+        <!-- Deskripsi -->
+        <div class="profile_description">
+          <p>
+            Ini adalah deskripsi channel. Ceritakan siapa kamu, konten apa yang kamu buat,
+            dan kenapa orang harus subscribe!
+          </p>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="profile_actions">
+          <button type="button" class="custom_btn" onclick="location.href='../Index/channelContent.html'">Custom Channel</button>
+          <button class="custom_btn">Custom Video</button>
+          <button class="custom_btn">Dashboard Video</button>
+          
+        </div>
+      </div>
+
+  </body>
+</html>
