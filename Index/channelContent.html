@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Channel Content</title>
+    <link rel="stylesheet" href="../Styles/channelContent_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <h2 class="channel_title">Channel Content</h2>
+
+        <!-- Tab Menu -->
+        <div class="tab_menu">
+          <button class="tab_btn active">Videos</button>
+          <button type="button" class="tab_btn" onclick="location.href='../Index/channelContentUpload.html'">Upload</button>
+          <button type="button" class="tab_btn" onclick="location.href='../Index/channelContentDelete.html'">Delete</button>
+        </div>
+
+        <!-- Konten Tab (dummy dulu) -->
+        <div class="tab_content">
+          <div class="video_table">
+            <!-- Header Kolom -->
+            <div class="video_header">
+              <div class="video_col">Publish</div>
+              <div class="video_col">View</div>
+              <div class="video_col">Like</div>
+              <div class="video_col">Dislike</div>
+            </div>
+
+            <!-- Baris Video -->
+            <div class="video_row">
+              <div class="video_info">
+                <img src="https://via.placeholder.com/160x90" alt="Thumbnail Video" class="video_thumb" />
+                <div class="video_meta">
+                  <p class="video_title">Judul Video Contoh</p>
+                  <p class="video_date">Published: 5 Juni 2025</p>
+                </div>
+              </div>
+              <div class="video_col">1.234</div>
+              <div class="video_col">567</div>
+              <div class="video_col">12</div>
+              <div class="video_info">
+                <img src="https://via.placeholder.com/160x90" alt="Thumbnail Video" class="video_thumb" />
+                <div class="video_meta">
+                  <p class="video_title">Judul Video Contoh</p>
+                  <p class="video_date">Published: 5 Juni 2025</p>
+                </div>
+              </div>
+              <div class="video_col">1.234</div>
+              <div class="video_col">567</div>
+              <div class="video_col">12</div>
+              <div class="video_info">
+                <img src="https://via.placeholder.com/160x90" alt="Thumbnail Video" class="video_thumb" />
+                <div class="video_meta">
+                  <p class="video_title">Judul Video Contoh</p>
+                  <p class="video_date">Published: 5 Juni 2025</p>
+                </div>
+              </div>
+              <div class="video_col">1.234</div>
+              <div class="video_col">567</div>
+              <div class="video_col">12</div>
+              <div class="video_info">
+                <img src="https://via.placeholder.com/160x90" alt="Thumbnail Video" class="video_thumb" />
+                <div class="video_meta">
+                  <p class="video_title">Judul Video Contoh</p>
+                  <p class="video_date">Published: 5 Juni 2025</p>
+                </div>
+              </div>
+              <div class="video_col">1.234</div>
+              <div class="video_col">567</div>
+              <div class="video_col">12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
