@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../Styles/profile_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <header>
+            <h1>Dashboard YouTube</h1>
+        </header>
+
+          <!-- Informasi Umum -->
+          <section class="info-section">
+            <h2>Informasi Umum</h2>
+            <div class="info-umum">
+              <div class="info-card">Total Video<br /><strong>120</strong></div>
+              <div class="info-card">Total Views<br /><strong>450.000</strong></div>
+              <div class="info-card">Rata-rata Durasi<br /><strong>7:45</strong></div>
+              <div class="info-card">Video Terpopuler<br /><strong>Belajar Java</strong></div>
+            </div>
+          </section>
+
+          <!-- Informasi Tiap Video -->
+          <section class="video-section">
+            <h2>Informasi Tiap Video</h2>
+            <div class="list-video">
+              <!-- Video 1 -->
+              <div class="video-card">
+                <div class="thumbnail">
+                  <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                    Browser Anda tidak mendukung video.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h3>Belajar Java</h3>
+                  <p>Tanggal Upload: 01/06/2025</p>
+                  <p>Durasi: 08:22</p>
+                  <p>Views: 12.300</p>
+                  <p>Likes: 780</p>
+                </div>
+              </div>
+
+              <!-- Video 2 -->
+              <div class="video-card">
+                <div class="thumbnail">
+                  <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                    Browser Anda tidak mendukung video.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h3>Tips Coding</h3>
+                  <p>Tanggal Upload: 28/05/2025</p>
+                  <p>Durasi: 05:10</p>
+                  <p>Views: 9.850</p>
+                  <p>Likes: 645</p>
+                </div>
+              </div>
+            </div>
+          </section>
+      </div>
+
+  </body>
+</html>
