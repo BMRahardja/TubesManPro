@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['upload'])) {
     <link rel="stylesheet" href="../Styles/channelContentUpload_styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
     <style>
-        /* Add this style for profile pictures */
+        /* add this style for profile pictures */
         .channel_pfp {
             width: 24px;
             height: 24px;
