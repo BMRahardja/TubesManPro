@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Details</title>
+    <link rel="stylesheet" href="../Styles/videoDetail_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="../Index/channelContent.html"><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <!-- Search dan Profil -->
+        <div class="top_bar">
+          <input type="text" placeholder="Search..." class="search_input" />
+          <a href="../Index/profile.html">
+            <div class="profile_hover_container">
+              <i class="fas fa-user-circle account_icon"></i>
+
+              <!-- Kotak logout yang muncul saat hover -->
+              <div class="logout_dropdown">
+                <a href="../Index/login.html" class="logout_btn">Logout</a>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="video_detail_container">
+          <!-- Video Player -->
+          <div class="video_player">
+            <video controls>
+              <source src="videos/sample1.mp4" type="video/mp4" />
+              Browser kamu tidak mendukung pemutar video.
+            </video>
+          </div>
+
+          <!-- Info Video -->
+          <div class="video_info">
+            <h2 class="video_title">Judul Video yang Diklik</h2>
+            <div class="video_stats">
+              <span>10.000 views • 5 Juni 2025</span>
+              <div class="video_actions">
+                <button class="like_btn">👍 1.200</button>
+                <button class="dislike_btn">👎 30</button>
+              </div>
+            </div>
+            <p class="video_description">Ini adalah deskripsi video yang bisa diisi dengan informasi, cerita, atau penjelasan tentang isi video. Santai aja gaya nulisnya.</p>
+          </div>
+
+          <!-- Kolom Komentar -->
+          <div class="comments_section">
+            <h3>Komentar</h3>
+            <textarea class="comment_input" placeholder="Tulis komentarmu di sini..."></textarea>
+            <button class="comment_submit">Kirim</button>
+
+            <div class="comment_list">
+              <div class="comment_item">
+                <strong>@username1</strong>
+                <p>Keren banget videonya!</p>
+              </div>
+              <div class="comment_item">
+                <strong>@userlain</strong>
+                <p>Gak nyangka ending-nya begitu 😲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
