@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Videos</title>
+    <link rel="stylesheet" href="../Styles/channelContentUpload_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <h2 class="channel_title">Channel Content</h2>
+
+        <!-- Tab Menu -->
+        <div class="tab_menu">
+          <button type="button" class="tab_btn" onclick="location.href='../Index/channelContent.html'">Videos</button>
+          <button class="tab_btn active">Upload</button>
+          <button type="button" class="tab_btn" onclick="location.href='../Index/channelContentDelete.html'">Delete</button>
+        </div>
+
+        <div class="upload_section">
+          <h2>Upload Videos</h2>
+
+          <form class="upload_form">
+            <label for="video_title">Judul Video</label>
+            <input type="text" id="video_title" placeholder="Masukkan judul video" required />
+
+            <label for="video_desc">Deskripsi</label>
+            <textarea id="video_desc" rows="4" placeholder="Tulis deskripsi video..."></textarea>
+
+            <label for="video_file">Pilih File Video</label>
+            <input type="file" id="video_file" accept="video/*" required />
+
+            <button type="submit" class="upload_btn">Upload</button>
+          </form>
+        </div>            
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

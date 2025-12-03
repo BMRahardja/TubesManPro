@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Videos</title>
+    <link rel="stylesheet" href="../Styles/channelContentDelete_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/homeChannel.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-qrcode"></i>Channel 1</a>
+          </li>
+          <li>
+            <a href="../Index/addChannel.html"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <h2 class="channel_title">Channel Content</h2>
+
+        <!-- Tab Menu -->
+        <div class="tab_menu">
+          <button type="button" class="tab_btn" onclick="location.href='../Index/channelContent.html'">Videos</button>
+          <button class="tab_btn">Upload</button>
+          <button class="tab_btn active">Delete</button>
+        </div>
+
+        <div class="delete_section">
+          <h2>Delete Videos</h2>
+
+          <div class="video_list">
+            <!-- Contoh video -->
+            <div class="video_item">
+              <div class="video_info">
+                <video src="videos/sample1.mp4" controls></video>
+                <div class="video_text">
+                  <h3>Judul Video 1</h3>
+                  <p>Dipublikasikan: 5 Juni 2025</p>
+                </div>
+              </div>
+              <button class="delete_btn">Delete</button>
+            </div>
+
+            <div class="video_item">
+              <div class="video_info">
+                <video src="videos/sample2.mp4" controls></video>
+                <div class="video_text">
+                  <h3>Judul Video 2</h3>
+                  <p>Dipublikasikan: 4 Juni 2025</p>
+                </div>
+              </div>
+              <button class="delete_btn">Delete</button>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
