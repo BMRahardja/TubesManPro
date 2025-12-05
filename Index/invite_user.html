@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invite Userl</title>
+    <link rel="stylesheet" href="../Styles/invite_user_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/home.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <h2 class="page_title">Channel Content</h2>
+
+        <!-- Tab Menu -->
+        <div class="tab_menu">
+          <button class="tab_btn" onclick="location.href='../Index/addChannel.html'">Create Channel</button>
+          <button type="button" class="tab_btn active">Invite User</button>
+        </div>
+
+        <form id="inviteForm">
+          <div class="form-group">
+            <label for="userEmail">User Email / Username</label>
+            <input type="text" id="userEmail" name="user" placeholder="e.g. johndoe@example.com" required />
+            <label for="userRole">Select Role</label>
+            <select id="userRole" name="role" required>
+              <option value="" disabled selected>Pilih role</option>
+              <option value="admin">Admin</option>
+              <option value="editor">Editor</option>
+              <option value="viewer">Viewer</option>
+            </select>
+          </div>
+          <button class="submit_btn" type="submit">Invite</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Panggil script JS terpisah -->
+    <script src="../Scripts/channels.js"></script>
+  </body>
+</html>
