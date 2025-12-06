@@ -1,0 +1,199 @@
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Checkbox disembunyikan secara spesifik */
+#check {
+  appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+/* Container utama */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar kiri */
+.left_side {
+  width: 250px;
+  background: #e63946;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-250px);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+
+.container .head {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  background: linear-gradient(30deg, #ac3333, #e63946);
+}
+
+ol {
+  width: 100%;
+  list-style: none;
+}
+
+ol li {
+  display: block;
+  width: 100%;
+}
+
+ol li a {
+  color: #fff;
+  padding: 15px 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+ol li a i {
+  width: 70px;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+}
+
+ol li:hover a {
+  background: #030303;
+  color: rgba(236, 236, 237, 0.667);
+  letter-spacing: 0.5px;
+}
+
+/* Tombol toggle sidebar */
+span {
+  position: absolute;
+  right: -40px;
+  top: 30px;
+  font-size: 25px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 3px 8px;
+  cursor: pointer;
+  background: #000;
+  z-index: 20;
+}
+
+#bars {
+  background: #e63946;
+}
+
+/* Checkbox aktif: sidebar muncul dan konten geser */
+#check:checked ~ .container .left_side {
+  transform: translateX(0);
+}
+
+#check:checked ~ .container #bars {
+  display: none;
+}
+
+#check:checked ~ .container .right_side {
+  margin-left: 250px;
+  transition: margin-left 0.5s ease;
+}
+
+/* Konten kanan */
+.right_side {
+  flex: 1;
+  padding: 30px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page_title {
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.channel_form_box {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.upload_label,
+.channel_name_label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input[type="file"] {
+  border: 2px dashed #ccc;
+  padding: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+input[type="file"]:hover {
+  border-color: #e63946;
+  background-color: #fff0f0;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #e63946;
+}
+
+.create_btn {
+  margin-top: 40px;
+  padding: 15px 40px;
+  background-color: #e63946;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.create_btn:hover {
+  background-color: #ac3333;
+}
+

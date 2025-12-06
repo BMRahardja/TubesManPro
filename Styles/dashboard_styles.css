@@ -1,0 +1,245 @@
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Checkbox disembunyikan secara spesifik */
+#check {
+  appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+/* Container utama */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar kiri */
+.left_side {
+  width: 250px;
+  background: #e63946;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-250px);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+
+.container .head {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  background: linear-gradient(30deg, #ac3333, #e63946);
+}
+
+ol {
+  width: 100%;
+  list-style: none;
+}
+
+ol li {
+  display: block;
+  width: 100%;
+}
+
+ol li a {
+  color: #fff;
+  padding: 15px 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+ol li a i {
+  width: 70px;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+}
+
+ol li:hover a {
+  background: #030303;
+  color: rgba(236, 236, 237, 0.667);
+  letter-spacing: 0.5px;
+}
+
+/* Tombol toggle sidebar */
+span {
+  position: absolute;
+  right: -40px;
+  top: 30px;
+  font-size: 25px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 3px 8px;
+  cursor: pointer;
+  background: #000;
+  z-index: 20;
+}
+
+#bars {
+  background: #e63946;
+}
+
+/* Checkbox aktif: sidebar muncul dan konten geser */
+#check:checked ~ .container .left_side {
+  transform: translateX(0);
+}
+
+#check:checked ~ .container #bars {
+  display: none;
+}
+
+#check:checked ~ .container .right_side {
+  margin-left: 250px;
+  transition: margin-left 0.5s ease;
+}
+
+/* Konten kanan */
+/* Konten kanan: agar elemen ada di tengah */
+.right_side {
+  flex: 1;
+  margin-left: 0;
+  padding: 30px;
+  transition: margin-left 0.5s ease;
+  overflow-y: auto;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Tengah secara horizontal */
+}
+
+/* Header */
+header {
+  background-color: #ff0000;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Umum */
+.info-section {
+  margin-bottom: 4rem; /* tambah jarak bawah section info umum */
+}
+
+.info-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.info-umum {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 140px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Informasi video section */
+.video-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 3rem;
+  margin-top: 4rem;
+}
+
+.video-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* List video card vertical */
+.list-video {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Setiap video card baris horizontal */
+.video-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.01);
+}
+
+/* Kotak video kecil di kiri, ukuran kecil */
+.thumbnail {
+  width: 160px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info di sebelah kanan video */
+.video-info {
+  margin-left: 1.5rem;
+  flex-grow: 1;
+}
+
+.video-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.video-info p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
