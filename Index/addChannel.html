@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Channel</title>
+    <link rel="stylesheet" href="../Styles/addChannel_styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="check" />
+
+    <div class="container">
+      <!-- Sidebar Kiri -->
+      <div class="left_side">
+        <div class="menu-header">
+          <label for="check">
+            <span class="fas fa-times" id="times"></span>
+            <span class="fas fa-bars" id="bars"></span>
+          </label>
+          <div class="head">MeTube</div>
+        </div>
+
+        <ol>
+          <li>
+            <a href="../Index/home.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i>Add Channel</a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Konten Kanan -->
+      <div class="right_side">
+        <h2 class="page_title">Channel Content</h2>
+
+        <!-- Tab Menu -->
+        <div class="tab_menu">
+          <button class="tab_btn active">Create Channel</button>
+          <button type="button" class="tab_btn" onclick="location.href='../Index/invite_user.html'">Invite User</button>
+        </div>
+
+        <form id="channelForm" class="channel_form_box" enctype="multipart/form-data">
+          <label class="upload_label" for="bannerUpload">Upload Banner</label>
+          <input type="file" name="banner" id="bannerUpload" accept="image/*" required />
+
+          <label class="upload_label" for="profileUpload">Upload Profile Photo</label>
+          <input type="file" name="profile_photo" id="profileUpload" accept="image/*" required />
+
+          <label class="channel_name_label" for="channelName">Channel Name</label>
+          <input type="text" name="channel_name" id="channelName" placeholder="Enter channel name" required />
+
+          <label class="channel_description" for="channelDescription">Channel Description</label>
+          <input type="text" name="description" id="channelDescription" placeholder="Enter channel description" />
+
+          <button type="submit" class="create_btn">Create</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Panggil script JS terpisah -->
+    <script src="../Scripts/channels.js"></script>
+  </body>
+</html>
